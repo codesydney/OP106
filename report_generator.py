@@ -11,17 +11,17 @@ for line in fileinput:
 		xvalSTR = ''.join(xval)
 		print(xvalSTR)
 
-	xval = re.findall('^Invoice Date: (\S+\S+)',line)
+	xval = re.findall('^Invoice Date: (\S+\s\S+\s\S+)',line)
 	if xval:
 		xvalSTR = ''.join(xval)
 		print(xvalSTR)
 		
-	xval = re.findall('^Invoice Number: (\S+\S+)',line)
+	xval = re.findall('^Invoice Number: (\S+)',line)
 	if xval:
 		xvalSTR = ''.join(xval)
 		print(xvalSTR)
 		
-	xval = re.findall('^Total AUD: (\S+\S+)',line)
+	xval = re.findall('^Total AUD: (\S+)',line)
 	if xval:
 		xvalSTR = ''.join(xval)
 		print(xvalSTR)
